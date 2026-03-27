@@ -126,6 +126,29 @@ update();
 </script>
 
 </body>
+</html>    }
+  }
+
+  obstacles = obstacles.filter(o => o.x > -50);
+
+  // Score
+  score++;
+  ctx.fillText("Score: " + score, 650, 30);
+
+  requestAnimationFrame(update);
+}
+
+// Speed increase
+setInterval(() => {
+  if (gameRunning) speed += 0.3;
+}, 3000);
+
+// Start
+spawnObstacle();
+update();
+</script>
+
+</body>
 </html>
 </body>
 </html>
